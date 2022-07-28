@@ -27,8 +27,8 @@ class UtenteGenerale {
         if($this->saldo < $priceToPay) {
             die('Non hai il contante necessario, riprova');
         } else {
-            return 'Pagamento effettuato.';
+            return 'Pagamento effettuato';
         }
     }
 }
-?
+?>

@@ -7,7 +7,6 @@ class ArticoliAnimali {
 
     public $marca;
 
-    public $categoria;
 
     public function __construct($_nome, $_prezzo, $_marca) {
         $this->nome = $_nome;

@@ -5,7 +5,6 @@
 
 // BONUS:
 // Il pagamento avviene con la carta prepagata che deve contenere un saldo sufficiente all'acquisto.
-
 require_once __DIR__ . '/Cibi.php';
 require_once __DIR__ . '/Cucce.php';
 require_once __DIR__ . '/UtenteAnonimo.php';
