@@ -25,7 +25,7 @@ class UtenteGenerale {
         $priceToPay = $this->calcPrice();
         
         if($this->saldo < $priceToPay) {
-            die('Non hai il contante necessario, riprova');
+            throw new Exeption("user: $this->nome = Saldo insufficente");
         } else {
             return 'Pagamento effettuato';
         }

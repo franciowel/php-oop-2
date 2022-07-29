@@ -25,12 +25,26 @@ $francesco->addProd($cuccia2);
 
 $francesco->saldo = 70;
 var_dump($francesco);
-echo $francesco->pay();
+try {
+    if($francesco->pay()) {
+        echo "<h3>Operazione effettuata con successo!</h3>";
+    }
+} catch(Exception $e) {
+    error_log($e->getMessage());
+    echo "<h3>Operazione non disponibile. Verificare il saldo e riprovare.</h3>";
+}
 
 $anonimo = new UtenteAnonimo();
 $anonimo->addProd($cuccia1);
 $anonimo->addProd($croccantini);
 var_dump($anonimo);
-echo $anonimo->pay();
+try {
+    if($anonimo->pay()) {
+        echo "<h3>Operazione effettuata con successo!</h3>";
+    }
+} catch(Exception $e) {
+    error_log($e->getMessage());
+    echo "<h3>Operazione non disponibile. Verificare il saldo e riprovare.</h3>";
+}
 
 ?>
